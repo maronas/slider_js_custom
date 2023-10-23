@@ -1,0 +1,105 @@
+body{
+    margin: auto 0;
+    font-family: Arial;
+    background: no-repeat center center fixed;
+    background-image: linear-gradient(to bottom right, rgb(41, 40, 40), #750158, rgb(41, 40, 40));
+    background-size: cover;
+}
+@keyframes slide_previous_hover {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+@keyframes slide_previous_under {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: 100%;
+    }
+}
+
+@keyframes slide_next_hover {
+    from{
+        margin-left: 0;
+    }
+    to{
+        margin-left: -100%;
+    }
+}
+@keyframes slide_next_under {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+/* left container */
+.left_container .left_container_logo{
+    font-size: 5rem;
+    color: #fff;
+    text-align: left;
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+}
+
+/* ---------Gallery--------- */
+.gallery{
+    width: 100vw;
+    width: 100dvw;
+}
+.gallery .slider_photo{
+    transition: 0.3;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    text-align: center;
+}
+.gallery .slider_photo img{
+    min-width: 96vw;
+    min-width: 96dvw;
+    max-height: 95vh;
+    max-height: 95dvh;
+}
+.gallery .slider_photo #gallery_img, .gallery_img_under{
+    position: absolute;
+    z-index: 3;
+}
+.gallery .slider_photo .gallery_img_under{
+    z-index: 1;
+}
+.gallery .gallery_buttons{
+    display: flex;
+    align-content: space-between;
+}
+.gallery .slider_photo .btn_slider_next, .gallery .slider_photo .btn_slider_previous{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    user-select: none;
+    -webkit-user-select: none;
+    z-index: 999;
+}
+.gallery .slider_photo .btn_slider_next:hover, .gallery .slider_photo .btn_slider_previous:hover{
+    background-color: rgba(0, 0, 0, 0.8);;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.gallery .slider_photo .btn_slider_next{
+    right: 0;
+    border-radius: 0 1rem 1rem 0;
+}
+.gallery .slider_photo .btn_slider_previous{
+    border-radius: 1rem 0 0 1rem;
+}
+/* ---------Gallery--------- */
