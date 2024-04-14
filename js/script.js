@@ -9,10 +9,6 @@ function dropMenu(){
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// var sliderInterval = setInterval(() => {
-//     changeImg("next");
-// }, imageSliderTimeDelay);
-
 var interval = setInterval("", 1500);
 
 function pause(){
@@ -48,24 +44,6 @@ function nextImg(){
         imgUnder.src = './img/gallery/' + counter + '.jpg';
         img.src = './img/gallery/' + nextCounter + '.jpg';
     }
-
-
-    // if(counter === 1){
-    //     nextCounter = 2;
-    //     img.src = './img/gallery/' + counter + '.jpg';
-    //     imgUnder.src = './img/gallery/' + nextCounter + '.jpg';
-    // }
-    // else if(counter < 1 ){
-    //     counter = maxImages;
-    //     nextCounter = 1;
-    //     img.src = './img/gallery/' + counter + '.jpg';
-    //     imgUnder.src = './img/gallery/' + nextCounter + '.jpg';
-    // }
-    // else{
-    //     nextCounter = counter + 1;
-    //     img.src = './img/gallery/' + counter + '.jpg';
-    //     imgUnder.src = './img/gallery/' + nextCounter + '.jpg';
-    // }
     animateImg("next");
 }
 
@@ -113,7 +91,6 @@ let checkImageExists = function(variable){
 }
 
 function animateImg(direction){
-    let holder = img;
 
     if(direction === "next"){
         resetAnimationsImg();
@@ -122,13 +99,11 @@ function animateImg(direction){
         setTimeout(() => {
             setImgSrc();
         }, 1500);
-        // restartTimer();
     }
     else if(direction === "previous"){
         resetAnimationsImg();
         img.style.animation = "1.5s slide_previous_hover";
         imgUnder.style.animation = "1.5s slide_previous_under";
-        // restartTimer();
     }
 }
 

@@ -1,9 +1,5 @@
 body{
-    margin: auto 0;
-    font-family: Arial;
-    background: no-repeat center center fixed;
-    background-image: linear-gradient(to bottom right, rgb(41, 40, 40), #750158, rgb(41, 40, 40));
-    background-size: cover;
+    background-image: linear-gradient(gray, black);
 }
 @keyframes slide_previous_hover {
     from {
@@ -38,15 +34,6 @@ body{
         margin-left: 0;
     }
 }
-/* left container */
-.left_container .left_container_logo{
-    font-size: 5rem;
-    color: #fff;
-    text-align: left;
-    font-family: Tahoma, sans-serif;
-    text-align: center;
-}
-
 /* ---------Gallery--------- */
 .gallery{
     width: 100vw;
@@ -83,7 +70,7 @@ body{
     width: auto;
     padding: 16px;
     margin-top: -50px;
-    color: white;
+    color: red;
     font-weight: bold;
     font-size: 2rem;
     user-select: none;
